@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Rosario&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="screen and (min-width: 750px)" href="../css/desktopstyles.css">
+    <link rel="stylesheet" media="screen and (max-width: 750px)" href="../css/mobilestyles.css">
+    
+    <title>Admin Home Page</title>
+</head>
+
+<body>
+    
+    <header>
+        <h1><a href ="/studenthome">QC First</a></h1>
+        <img class="libPic"  src="../img/qc3.jpeg" alt="Rosenthal">
+        <hr>
+        <ul class = "headerList">
+            <li><a href = "/studenthome" class = "headerButton">Home</a></li>
+            <li>
+                <form method="post" action="/logout">
+                    <button name="logoutButton" class="logoutButton">Logout</button>
+                </form>
+            </li>
+        </ul>
+    </header>
+    
+    <div id="page-container">
+        <div id="content-wrap">
+
+            <div>
+                <form method="post" action="/showdatabase">
+                    <ul class="adminTableButtonList centerButton">
+                        <li><button name = "adminButton" value = "1" class="adminButton">Student Database</button></li>
+                        <li><button name = "adminButton" value = "2" class="adminButton">Instructor Database</button></li>
+                        <li><button name = "adminButton" value = "3" class="adminButton">Course Database</button></li>
+                        <li><button name = "adminButton" value = "4" class="adminButton">Search Database</button></li>
+                    </ul> 
+                </form>
+            </div>
+
+            <%- adminTableInfo %>
+
+        </div>
+
+        <footer>
+            <hr>
+            <ul class = "footerList">
+                <li><a class = "footerButton">Terms Of Use</a></li>
+                <li><a href = "https://twitter.com/QC_News?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class = "footerButton" id = "contactUs">Contact Us</a></li>
+                <li><a class = "footerButton">Copyright 2021</a></li>
+            </ul> 
+        </footer>
+
+    </div>        
+</body>
+</html>
